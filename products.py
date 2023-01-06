@@ -1,16 +1,16 @@
 products = [
 	{
-		"name": "laptop"
+		"name": "laptop",
 		"price": 800,
 		"quantity": 4
 	}, 
 	{
-		"name": "mouse"
+		"name": "mouse",
 		"price": 80,
 		"quantity": 40
 	}, 
 	{
-		"name": "board"
+		"name": "board",
 		"price": 300,
 		"quantity": 14
 	}
