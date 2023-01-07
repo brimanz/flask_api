@@ -1,9 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from products import products
 
 
 app = Flask(__name__)
 
+
+#first route test
 @app.route("/ping")
 def ping():
 	return jsonify({
@@ -33,6 +35,20 @@ def getProduct(product_name):
 
 	})
 
+@app.route("/products", methods=["POST"])
+def addProduct():
+	new_product = {
+		"name": request.json["name"],
+		"price": request.json["price"],
+		"quantity": request.json["quantity"]
+	}
+	
+	products.append(new_product)
+	return (request.json)
+
+
 
 if __name__ == "__main__":
 	app.run(debug=True, port=4000)
+
+#tutorial flask-api 26:04
