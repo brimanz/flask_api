@@ -42,7 +42,7 @@ def addProduct():
 		"price": request.json["price"],
 		"quantity": request.json["quantity"]
 	}
-	
+
 	products.append(new_product)
 	return (request.json)
 
@@ -50,5 +50,3 @@ def addProduct():
 
 if __name__ == "__main__":
 	app.run(debug=True, port=4000)
-
-#tutorial flask-api 26:04
